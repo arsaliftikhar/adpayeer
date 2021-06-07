@@ -85,7 +85,7 @@ body
     width: 350px;
     padding: 20px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 80px;
     transition: 0.5s;
 }
 .container img
@@ -114,7 +114,7 @@ form .input-control i
 {
     color: #22ab59;
 }
-form input[type=email],form input[type=password]
+form input[type=email],form input[type=password],form input[type=text],form select
 {
     padding: 5px;
     background:none;
@@ -124,9 +124,18 @@ form input[type=email],form input[type=password]
     font-weight: 500;
     font-size: 16px;
 }
-form input[type=email]:focus,form input[type=password]:focus
+form input[type=email]:focus,form input[type=password]:focus,form input[type=text]:focus,form select:focus
 {
     outline: none;
+}
+form select option
+{
+    width: 100%;
+    background-color: #e9fff8;
+}
+form select option:hover
+{
+    background-color: #22ab59;
 }
 form a
 {
