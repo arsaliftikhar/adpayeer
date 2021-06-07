@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto",sans-serif;
+    box-sizing: border-box;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+.btn-primary
+{
+    background-color: #22ab59;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+.btn-primary:hover
+{
+    background-color: #23ba64;
+}
+.btn-default
+{
+    background-color: white;
+    text-decoration: none;
+    color: #22ab59;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+.btn-default:hover
+{
+    background-color: whitesmoke;
+}
+.primary-color
+{
+    color: #22ab59;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+body
+{
+    background-color: #e9fff8;
+}
+.back-img img
+{
+    height: 500px;
+    position: absolute;
+    z-index: -1;
+    margin-left: -100px;
+    opacity: 30%;
+}
+.container
+{
+    display: flex;
+    /*background-color: lightgrey;*/
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+    transition: 0.5s;
+}
+.container img
+{
+    height: 30px;
+}
+.container #title
+{
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 30px;
+    color: #272c32;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+form .input-control
+{
+    border-bottom: 2px solid #22ab59;
+}
+form .input-control i
+{
+    color: #22ab59;
+}
+form input[type=email],form input[type=password]
+{
+    padding: 5px;
+    background:none;
+    border: none;
+    width: 90%;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 16px;
+}
+form input[type=email]:focus,form input[type=password]:focus
+{
+    outline: none;
+}
+form a
+{
+    color: #555555;
+    font-size: 12px;
+    padding: 5px;
+    text-align: right;
+}
+form .alreadyAccount
+{
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+@media (max-width: 490px) {
+
+    .container
+    {
+        width: 250px;
+        transition: 0.5s;
+    }
+}
