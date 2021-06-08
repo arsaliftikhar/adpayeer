@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto",sans-serif;
+    box-sizing: border-box;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+.btn-primary
+{
+    background-color: #22ab59;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+.btn-primary:hover
+{
+    background-color: #23ba64;
+}
+.btn-default
+{
+    background-color: white;
+    text-decoration: none;
+    color: #22ab59;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+.btn-default:hover
+{
+    background-color: whitesmoke;
+}
+.primary-color
+{
+    color: #22ab59;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+body
+{
+    background-color: #e9fff8;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 80px 20px 0px 20px;
+    transition: 0.5s;
+}
+.container img
+{
+    height: 150px;
+}
+.container .heading p
+{
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #22ab59;
+}
+.container .email-description
+{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: justify;
+    padding: 10px;
+    width: 350px;
+    color: #919191;
+}
+form input[type=text]
+{
+    padding: 5px;
+    background:none;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #22ab59;
+    border: 2px solid #22ab59;
+    border-radius: 2px;
+}
+form input[type=text]:focus
+{
+    outline: none;
+}
+@media (max-width: 320px) {
+
+    .container .email-description
+    {
+        width: 250px;
+        font-size: 12px;
+    }
+    form input[type=text]
+    {
+        font-size: 14px;
+        padding: 3px;
+        width: 150px;
+    }
+    .btn-primary
+    {
+        padding: 4px;
+    }
+    .primary-color
+    {
+        font-size: 14px;
+    }
+}

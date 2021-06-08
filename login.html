@@ -27,19 +27,21 @@
 </div>
 <div class="container">
     <a href="index.html"><img class="logo" src="material/logo.png" alt=""></a>
-
     <p id="title">Login</p>
     <form action="">
-        <div class="input-control">
+        <div id="wrong-error" class="animate__animated animate__shakeX ">Wrong email or password</div>
+        <div id="email-text" class="input-control">
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Enter Email" autocomplete="off">
+            <input id="email" type="email" placeholder="Enter Email" autocomplete="off">
         </div>
-        <div class="input-control">
+        <small id="email-error"></small>
+        <div id="password-text" class="input-control">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Enter Password">
+            <input id="password" type="password" placeholder="Enter Password">
         </div>
+        <small id="password-error"></small>
         <br>
-        <input class="btn-primary" type="submit" value="Login" placeholder="Enter Password">
+        <input id="submit" class="btn-primary" type="submit" value="Login" placeholder="Enter Password">
         <a href="#">Forgot Password</a>
         <a href="signup.html" class="alreadyAccount">Create an account</a>
     </form>
@@ -49,6 +51,67 @@
     <img style=" margin-left: 100px;width: 100px;height:100px;opacity: 30%;position: absolute;z-index: -1" src="material/rounded%20ring.png" alt="">
 </div>
 
+<script src="links/library/jquery.js"></script>
+<script src="links/js/main.js"></script>
+<script>
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+    $( document ).ready(function() {
+       $('#submit').click(function (e) {
+
+           if ($('#email').val()=='' || isEmail($('#email').val())==false)
+           {
+               $('#email-text').css("border-bottom", "2px solid #ed4337");
+               $('.fa-envelope').css("color", "#ed4337");
+               $("#email-error").text("Invalid email");
+               $("#email-error").css({"font-size": "10px", "color": "#ed4337","display":"block"});
+               e.preventDefault();
+           }
+           else if ($('#password').val()=='')
+           {
+               $('#password-text').css("border-bottom", "2px solid #ed4337");
+               $('.fa-lock').css("color", "#ed4337");
+               $("#password-error").text("Invalid password");
+               $("#password-error").css({"font-size": "10px", "color": "#ed4337","display":"block"});
+               e.preventDefault();
+           }
+
+       });
+
+       $('#email').keyup(function (e) {
+           $('#email-text').css("border-bottom", "2px solid #22ab59");
+           $('.fa-envelope').css("color", "#22ab59");
+           $("#email-error").css("display", "none");
+           $('#wrong-error').css("display", "none");
+           e.preventDefault();
+       });
+        $('#password').keyup(function (e) {
+            $('#password-text').css("border-bottom", "2px solid #22ab59");
+            $('.fa-lock').css("color", "#22ab59");
+            $("#password-error").css("display", "none");
+            $('#wrong-error').css("display", "none");
+            e.preventDefault();
+        });
+        if ($('#wrong-error').text()=='')
+        {
+            $('#wrong-error').css("display", "none");
+        }
+        else
+        {
+            $('#wrong-error').css({
+                "font-size": "12px",
+                "background-color": "#ed4337",
+                "color": "white",
+                "padding": "10px",
+                "border-radius": "2px",
+                "text-align":"center"
+                });
+        }
+    });
+
+</script>
 
 </body>
 </html>
