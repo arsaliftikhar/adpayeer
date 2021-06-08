@@ -365,11 +365,12 @@ nav ul li a{
     ul{
         position: fixed;
         width: 50%;
-        height: 100vh;
+        /*height: 100vh;*/
         top: 70px;
         background: white;
         box-shadow: lightblue 0px 0px 5px;
         right: -50%;
+        border-radius: 100px 0px 0px 20px;
         text-align: center;
         transition: all .5s;
     }
