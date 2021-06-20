@@ -1,0 +1,186 @@
+select {
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #f5f7fa;
+    color: #203259;
+}
+/* Custom Select */
+.select {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 2.5em;
+    line-height: 3;
+    background: #f5f7fa;
+    overflow: hidden;
+    border-radius: .25em;
+    margin: 10px;
+    box-shadow: #e0e0e0 0px 0px 5px;
+}
+select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #203259;
+    cursor: pointer;
+    box-shadow: gray 0px 2px 20px;
+    outline: none;
+    border: 0;
+
+}
+/* Arrow */
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.3em 1em;
+    font-size: 12px;
+    background: #e5e7ea;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+    color: #22ab59;
+}
+
+.container
+{
+    background-color: #fff0bd;
+    box-shadow: lightgrey 0px 0px 10px;
+    margin: 100px 200px 20px 200px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.container .row
+{
+    display: flex;
+}
+.container .row2
+{
+    display: flex;
+}
+#page-title
+{
+    font-size: 22px;
+    font-weight: 600;
+    color: #203259;
+}
+.container2
+{
+    margin: 10px 200px;
+    border-radius: 5px;
+}
+.container2 .row
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container2 .row2
+{
+    align-items: center;
+    background-color: white;
+    margin-top: 10px;
+    border: 1px solid lightgrey;
+    padding: 10px 20px;
+    color: #203259;
+    transition: 0.5s;
+}
+.container2 .row2 .subrow2
+{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+    align-items: center;
+}
+.container2 .row2:hover
+{
+    box-shadow: lightgrey 0px 0px 10px;
+    border-left: 3px solid #22ab59;
+    transition: 0.5s;
+}
+.container2 .row2 .subrow2 a
+{
+    color: #203259;
+    text-decoration: none;
+    margin: 0px 5px;
+}
+.container2 .row2 .subrow2 a .tooltiptext
+{
+    width: 70px;
+    padding: 5px;
+}
+.job-title
+{
+    font-size: 18px;
+}
+.job-title:hover
+{
+    color: #22ab59;
+}
+.job-description
+{
+    font-size: 12px;
+    padding: 7px;
+}
+.job-description span
+{
+    background-color: #f5f1f0;
+    padding: 4px;
+    border-radius: 3px;
+    font-size: 10px;
+}
+@media (max-width: 1150px) {
+
+    .container
+    {
+        margin: 100px 100px 10px 100px;
+    }
+    .container2
+    {
+        margin: 10px 100px 10px 100px;
+    }
+}
+@media (max-width: 880px) {
+    .container
+    {
+        margin: 100px 50px 10px 50px;
+    }
+    .container2
+    {
+        margin: 10px 50px 10px 50px;
+    }
+}
+@media (max-width: 650px){
+    .container .row2
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 490px) {
+
+    .container
+    {
+        margin: 100px 10px 10px 10px;
+    }
+    .container2
+    {
+        margin: 10px 10px 10px 10px;
+    }
+    .container2 .row
+    {
+        flex-direction: column-reverse;
+    }
+    .container2 .row p
+    {
+        margin: 10px 0px 0px 0px;
+    }
+
+}
